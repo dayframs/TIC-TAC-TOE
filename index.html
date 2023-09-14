@@ -3,27 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
     <h1>TIC-TAC-TOE</h1>
+    <div class="players">
+        <div class="playerA">
+            <label for="player1">Player1</label>
+            <input name="player1" type="text" id="player1" placeholder="enter your name" required>
+        </div>
+        <div class="playerB">
+            <label for="player2">Player2</label>
+            <input name="player2" type="text" id="player2" placeholder="enter your name" required>
+        </div>
+    </div>
+    <div>
+        <input id="btn1" type="text" value="START" disabled>
+    </div>
     <table>
         <tr>
-            <td>1</td>
-            <td>2</td>
-            <td>3</td>
+            <td onclick="display(event)"></td>
+            <td onclick="display(event)"></td>
+            <td onclick="display(event)"></td>
         </tr>
         <tr>
-            <td>4</td>
-            <td></td>
-            <td></td>
+            <td onclick="display(event)"></td>
+            <td onclick="display(event)"></td>
+            <td onclick="display(event)"></td>
         </tr>
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td id="tab" onclick="display(event)"></td>
+            <td id="tab" onclick="display(event)"></td>
+            <td id="tab" onclick="display(event)"></td>
         </tr>
     </table>
+    <button id="btn2">RESTART</button>
+    <script src="./index.js"></script>
 </body>
 </html>
