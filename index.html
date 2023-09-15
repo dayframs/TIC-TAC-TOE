@@ -7,38 +7,42 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <h1>TIC-TAC-TOE</h1>
+    <h1>LET'S PLAY</h1>
     <div class="players">
         <div class="playerA">
-            <label for="player1">Player1</label>
-            <input name="player1" type="text" id="player1" placeholder="enter your name" required>
+            <label for="player">
+                Player1 <button>X</button>
+            </label>
+            <input name="player" type="text" id="inp1" placeholder="enter your name">
         </div>
         <div class="playerB">
-            <label for="player2">Player2</label>
-            <input name="player2" type="text" id="player2" placeholder="enter your name" required>
+            <label for="players">
+                Player2 <button>O</button>
+            </label>
+            <input name="players" type="text" id="inp2" placeholder="enter your name">
         </div>
     </div>
     <div>
-        <input id="btn1" type="text" value="START" disabled>
+        <button id="btn1" onclick="startGame()">START</button>
     </div>
     <table>
         <tr>
-            <td onclick="display(event)"></td>
-            <td onclick="display(event)"></td>
-            <td onclick="display(event)"></td>
+            <td id="b1" onclick="display(event)"></td>
+            <td id="b2" onclick="display(event)"></td>
+            <td id="b3" onclick="display(event)"></td>
         </tr>
         <tr>
-            <td onclick="display(event)"></td>
-            <td onclick="display(event)"></td>
-            <td onclick="display(event)"></td>
+            <td id="b4" onclick="display(event)"></td>
+            <td id="b5" onclick="display(event)"></td>
+            <td id="b6" onclick="display(event)"></td>
         </tr>
         <tr>
-            <td id="tab" onclick="display(event)"></td>
-            <td id="tab" onclick="display(event)"></td>
-            <td id="tab" onclick="display(event)"></td>
+            <td id="b7" class="tab" onclick="display(event)"></td>
+            <td id="b8" class="tab" onclick="display(event)"></td>
+            <td id="b9" class="tab" onclick="display(event)"></td>
         </tr>
     </table>
-    <button id="btn2">RESTART</button>
+    <button id="btn2" onclick="restart()">RESTART</button>
     <script src="./index.js"></script>
 </body>
 </html>
