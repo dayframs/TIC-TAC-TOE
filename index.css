@@ -2,14 +2,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-style: italic;
+    font-family: cursive;
+}
+body {
+    width: 500px;
+    margin: auto;
+    background-color: rgb(61, 58, 58);
 }
 h1 {
-    margin: 40px auto 20px auto;
-    width: 250px;
+    margin: 20px auto 20px auto;
+    width: 230px;
     text-align: center;
     color: white;
-    background-color: orange;
 }
 .players {
     display: flex;
@@ -28,20 +32,38 @@ h1 {
     background-color: orange;
     color: antiquewhite;
     height: 60px;
-    font-weight: 800;
+    font-weight: 600;
     border-radius: 4px;
     font-size: 20px;
+    position: relative;
+}
+.playerA button,
+.playerB button {
+    position: absolute;
+    top: 29px;
+    right: 8px;
+    border: none;
+    border-radius: 0 4px 4px 0;
+    font-size: 18px;
+    width: 50px;
+    height: 30px;
 }
 .players input {
     height: 30px;
+    width: 180px;
     border: none;
     border-radius: inherit;
     font-size: 16px;
     padding-left: 10px;
 }
-#btn1, #btn2 {
+.players input::placeholder {
+    color: rgb(128, 128, 128, 0.5);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+#btn1 {
     width: 100px;
-    height: 40px;
+    height: 30px;
     border: none;
     background-color: black;
     font-size: 14px;
@@ -62,19 +84,28 @@ h1 {
 #btn1:hover {
     opacity: 0.8;
 }
+#btn2 {
+    width: 150px;
+    height: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 175px;
+    border-radius: 50%;
+    border: none;
+}
 table {
-    padding: 10px;
+    padding: 5px;
     margin: 20px auto;
     border-collapse: collapse;
 }
 td {
-    border: 4px solid orange;
+    border: 1px solid orange;
     border-left: none;
     border-top: none;
     color : orange;
-    height: 90px;
-    width: 90px;
-    font-size: 64px;
+    height: 75px;
+    width: 75px;
+    font-size: 50px;
     font-weight: 600;
     cursor: pointer;
     text-align: center;
@@ -84,4 +115,15 @@ td:nth-child(3n) {
 }
 .tab {
     border-bottom: none;
+}
+#winningMessage {
+width: 300px;
+height: 60px;
+margin: auto;
+display: flex;
+justify-content: center;
+align-items: center;
+font-family: fantasy;
+font-size: 20px;
+background-color: rgb(255, 165, 0, 0.5);
 }

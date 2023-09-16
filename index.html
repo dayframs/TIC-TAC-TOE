@@ -7,19 +7,21 @@
     <link rel="stylesheet" href="./index.css">
 </head>
 <body>
-    <h1>LET'S PLAY</h1>
+    <h1>TIC TAC TOE</h1>
     <div class="players">
         <div class="playerA">
             <label for="player">
-                Player1 <button>X</button>
+                X
             </label>
             <input name="player" type="text" id="inp1" placeholder="enter your name">
+            <button id="scoreA" class="scores">0</button>
         </div>
         <div class="playerB">
             <label for="players">
-                Player2 <button>O</button>
+                O
             </label>
             <input name="players" type="text" id="inp2" placeholder="enter your name">
+            <button id="scoreB" class="scores">0</button>
         </div>
     </div>
     <div>
@@ -42,7 +44,8 @@
             <td id="b9" class="tab" onclick="display(event)"></td>
         </tr>
     </table>
-    <button id="btn2" onclick="restart()">RESTART</button>
+    <div id="winningMessage"></div>
+    <button id="btn2" onclick="restart()">RESET GAME</button>
     <script src="./index.js"></script>
 </body>
 </html>
