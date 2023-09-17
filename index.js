@@ -17,6 +17,7 @@ function startGame(){
     startG = false;
     if (c && d) {
         startG = true;
+        alert('Enjoy your game!');
     }
     else {
         alert('kindly enter your name');
@@ -45,7 +46,7 @@ function display(a) {
             alert('enter your name, please.')
         }
         }else {
-            alert('GameOver!');
+            console.log('GameOver!');
     }
 } 
 let sa;
@@ -58,7 +59,7 @@ function winner() {
         winningMessage.innerText = ('Congratulations! ' + c + ' won.');
         scoreA.innerText = Number(sa) + 1;
         win = true;
-    } else if (b1.innerText=='O' && b2.innerText=='O'&& b3.innerText=='O'||b4.innerText=='O' && b5.innerText=='O'&& b6.innerText=='O'||b7.innerText=='O' && b8.innerText=='O'&& b9.innerText=='O'|| b1.innerText=='O' && b4.innerText=='O'&& b7.innerText=='O'||b2.innerText=='O' && b5.innerText=='O'&& b8.innerText=='O'||b3.innerText=='O' && b6.innerText=='O'&& b9.innerText=='O' | b1.innerText=='O' && b5.innerText=='O'&& b9.innerText=='O'||b3.innerText=='O' && b5.innerText=='O'&& b7.innerText=='O') {
+    } else if (b1.innerText=='O' && b2.innerText=='O'&& b3.innerText=='O'||b4.innerText=='O' && b5.innerText=='O'&& b6.innerText=='O'||b7.innerText=='O' && b8.innerText=='O'&& b9.innerText=='O'|| b1.innerText=='O' && b4.innerText=='O'&& b7.innerText=='O'||b2.innerText=='O' && b5.innerText=='O'&& b8.innerText=='O'||b3.innerText=='O' && b6.innerText=='O'&& b9.innerText=='O' || b1.innerText=='O' && b5.innerText=='O'&& b9.innerText=='O'||b3.innerText=='O' && b5.innerText=='O'&& b7.innerText=='O') {
         winningMessage.innerText = ('Congratulations! ' + d + ' won.');
         scoreB.innerText = Number(sb) + 1;
         win = true;
@@ -67,7 +68,7 @@ function winner() {
         win = true;
     }
 }
-function restart() {
+function reset() {
     b1.innerText = '';
     b2.innerText = '';
     b3.innerText = '';
@@ -80,7 +81,7 @@ function restart() {
     winningMessage.innerText = ('');
     win = false;
 }
-function reset() {
+function endGame() {
     b1.innerText = '';
     b2.innerText = '';
     b3.innerText = '';
