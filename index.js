@@ -12,6 +12,7 @@ let box8;
 let box9;
 let win = false;
 let gameOver = true;
+let res = true;
 function startGame(){
     c = inp1.value;
     d = inp2.value;
@@ -19,6 +20,7 @@ function startGame(){
     if (c && d) {
         startG = true;
         gameOver = false;
+        res = false;
         alert('Enjoy your game!');
     }
     else {
@@ -30,7 +32,7 @@ function display(a) {
     player1 = 'X';
     player2 = 'O'; 
     e = a.target.innerText;
-    if (!win || !gameOver) {
+    if (!win || !gameOver || !res) {
         if (startG) {
             if (e == false) {
                 if (click) {
@@ -82,6 +84,7 @@ function reset() {
     b9.innerText = '';
     winningMessage.innerText = ('');
     win = false;
+    res = true;
 }
 function endGame() {
     b1.innerText = '';
