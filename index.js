@@ -96,7 +96,9 @@ function endGame() {
     inp2.value = '';
     scoreA.innerText = '0';
     scoreB.innerText = '0';
-    win = true;
+    startG = true;
+    e = false;
+    win = false;
 }
 // HOW TO DISABLE THE EMPTY SPACE AS SOON AS THERE IS A WINNER.
 
