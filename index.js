@@ -11,12 +11,11 @@ let box7;
 let box8;
 let box9;
 let win = false;
-let gameOver = false;
+let gameOver = true;
 function startGame(){
     c = inp1.value;
     d = inp2.value;
     startG = false;
-    gameOver = true;
     if (c && d) {
         startG = true;
         gameOver = false;
@@ -99,7 +98,7 @@ function endGame() {
     inp2.value = '';
     scoreA.innerText = '0';
     scoreB.innerText = '0';
-    win = false;
+    win = true;
     gameOver = true;
 }
 // HOW TO DISABLE THE EMPTY SPACE AS SOON AS THERE IS A WINNER.
