@@ -32,7 +32,7 @@ function display(a) {
     player1 = 'X';
     player2 = 'O'; 
     e = a.target.innerText;
-    if (!win || !win && !gameOver || !win && !res || !win && !gameOver && !res) {
+    if ((!win || !gameOver) || (!win || !res)) {
         if (startG) {
             if (e == false) {
                 if (click) {
