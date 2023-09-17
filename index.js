@@ -46,7 +46,7 @@ function display(a) {
             alert('enter your name, please.')
         }
         }else {
-            console.log('GameOver!');
+            alert('GameOver!');
     }
 } 
 let sa;
@@ -96,8 +96,7 @@ function endGame() {
     inp2.value = '';
     scoreA.innerText = '0';
     scoreB.innerText = '0';
-    win = false;
-    click = false;
+    win = true;
 }
 // HOW TO DISABLE THE EMPTY SPACE AS SOON AS THERE IS A WINNER.
 
