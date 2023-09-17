@@ -11,12 +11,15 @@ let box7;
 let box8;
 let box9;
 let win = false;
+let gameOver = false;
 function startGame(){
     c = inp1.value;
     d = inp2.value;
     startG = false;
+    gameOver = true;
     if (c && d) {
         startG = true;
+        gameOver = false;
         alert('Enjoy your game!');
     }
     else {
@@ -28,7 +31,7 @@ function display(a) {
     player1 = 'X';
     player2 = 'O'; 
     e = a.target.innerText;
-    if (!win) {
+    if (!win || !gameOver) {
         if (startG) {
             if (e == false) {
                 if (click) {
@@ -96,8 +99,8 @@ function endGame() {
     inp2.value = '';
     scoreA.innerText = '0';
     scoreB.innerText = '0';
-    startG = false;
-    win = true;
+    win = false;
+    gameOver = true;
 }
 // HOW TO DISABLE THE EMPTY SPACE AS SOON AS THERE IS A WINNER.
 
