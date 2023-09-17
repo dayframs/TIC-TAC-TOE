@@ -13,6 +13,7 @@ let box9;
 let win = false;
 let gameOver = true;
 let res = true;
+
 function startGame(){
     c = inp1.value;
     d = inp2.value;
@@ -32,7 +33,7 @@ function display(a) {
     player1 = 'X';
     player2 = 'O'; 
     e = a.target.innerText;
-    if (!win || (!win || !gameOver) || (!win || !res)) {
+    if (!win) {
         if (startG) {
             if (e == false) {
                 if (click) {
@@ -72,6 +73,7 @@ function winner() {
         win = true;
     }
 }
+
 function reset() {
     b1.innerText = '';
     b2.innerText = '';
@@ -83,9 +85,10 @@ function reset() {
     b8.innerText = '';
     b9.innerText = '';
     winningMessage.innerText = ('');
-    win = true;
+    win = false;
     res = true;
 }
+
 function endGame() {
     b1.innerText = '';
     b2.innerText = '';
@@ -101,10 +104,11 @@ function endGame() {
     inp2.value = '';
     scoreA.innerText = '0';
     scoreB.innerText = '0';
-    win = true;
+    win = false;
     gameOver = true;
+    startG = false;
 }
-// HOW TO DISABLE THE EMPTY SPACE AS SOON AS THERE IS A WINNER.
+
 
     
     
