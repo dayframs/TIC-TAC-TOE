@@ -83,7 +83,7 @@ function reset() {
     b8.innerText = '';
     b9.innerText = '';
     winningMessage.innerText = ('');
-    win = false;
+    win = true;
     res = true;
 }
 function endGame() {
